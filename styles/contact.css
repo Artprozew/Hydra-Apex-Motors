@@ -1,0 +1,117 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+    padding: 200px 0 120px 0;
+    flex-grow: 1;
+    background-image: linear-gradient(#f2f2f2, #ccc);
+}
+
+.contact-form {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 35px 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+}
+
+.contact-form h1 {
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 2em;
+    font-weight: 600;
+}
+
+label {
+    display: block;
+    margin: 5px 0 5px 0;
+    color: #555;
+    font-weight: 500;
+}
+
+textarea, input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1em;
+    color: #333;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+}
+
+textarea:focus, input:focus {
+    border-color: burlywood;
+    box-shadow: 0 0 0 3px rgba(123, 123, 123, 0.1);
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.error-message {
+    color: #dc3545;
+    font-size: 0.85em;
+    margin-top: 5px;
+    height: 18px;
+    display: none;
+}
+
+input:focus.invalid,
+textarea:focus.invalid {
+    border-color: #dc3545;
+    box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.25);
+}
+
+button {
+    background-color: burlywood;
+    color: black;
+    padding: 14px 25px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #c9a577;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+    .main-container {
+        padding: 80px 25px;
+    }
+    h1 {
+        font-size: 1.8em;
+    }
+    button {
+        font-size: 1em;
+        padding: 12px 20px;
+    }
+}
